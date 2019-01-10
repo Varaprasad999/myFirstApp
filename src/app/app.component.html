@@ -1,0 +1,82 @@
+<input [(ngModel)]="title" /><br/>
+{{title}}
+<br/>
+<br/>
+{{number}}<br/>
+ 
+ <table  border="2">
+    <thead>
+        <th>Id</th>
+        <th>First_Name</th>
+        <th>Last_Name</th>
+    </thead>
+    <tr *ngFor="let v of dispalyData; let i = index">
+        <td>{{v.id}}</td>
+        <td>{{v.first_name}}</td>
+        <td>{{v.last_name}}</td>
+        <th><button (click)="removeUser('i')">delete</button></th>
+    </tr>
+</table><br>
+<!--<table>
+    <thead>
+        <th>ID</th>
+        <th>firtName</th>
+        <th>LastName</th>
+    </thead>
+    <tr *ngFor="let b of dispalyData.data">
+        <td>{{b.id}}</td>
+        <td>{{b.first_name}}</td>
+        <td>{{b.last_name}}</td>
+    </tr>
+</table><br>
+<table>
+        <thead>
+            <th>ID</th>
+            <th>firtName</th>
+            <th>LastName</th>
+        </thead>
+        <tr *ngFor="let r of dispalyData.data">
+            <td>{{r.id}}</td>
+            <td>{{r.first_name}}</td>
+            <td>{{r.last_name}}</td>
+        </tr>
+    </table>-->
+
+
+<button (click)="btnLogint()">menu</button>
+<button (click)="btnLogin()">nugn</button>
+<button (click)="add()">add  </button>
+<button (click)="subNums()" >subt</button>
+<button (click)="mulNums()">mult</button>
+<button (click)="divdNum()">ddd</button><br/>
+<button (click)="fechUser()">get</button>
+<button (click)="fechUserId()">ID</button>
+<button (click)="insertUser()">create</button>
+
+<div *ngIf="Login===true">
+
+        <p>Login Form</p>    
+        <p>User Id::<input type="text" /></p>
+        <p>
+            Password1::<input type="password" />
+        </p>
+        <input type="button" value="next" (click)="btnLogin()"/>
+        <br/>
+        <br/>
+</div>
+
+<div *ngIf="Login===false">
+
+        <p>Registation</p>
+        <p>User Id::<input type="text" /></p>
+        <p>
+            Password2::<input type="password" />
+        </p>
+        <input type="button" value="next" />
+        <br>
+        <br>
+</div>
+       
+
+
+
